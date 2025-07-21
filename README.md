@@ -8,7 +8,7 @@
 Что насчет составляющих программы?  
 Разберем подробнее основные моменты:  
 
-Класс Postcard - точка входа программы, то, с чего начинается все веселье:  
+Класс Postcard — точка входа программы, то, с чего начинается всё веселье:  
 ```java
 import javax.swing.*;
 import java.awt.*;
@@ -43,7 +43,7 @@ import java.awt.*;
 public class MyDrawPanel extends JPanel {
 ```
 
-В конструкторе класса запускается таймер, который с периодичностью в 100мс перерисовывает фигуры на открытке:  
+В конструкторе класса запускается таймер, который с периодичностью в 100 мс перерисовывает фигуры на открытке:  
 ```java
     public MyDrawPanel() {
         Timer timer = new Timer(100, new ActionListener() {
@@ -65,11 +65,11 @@ public class MyDrawPanel extends JPanel {
     }
 ```
 
-Класс paintComponent содержит аргумент Graphics g, который можно воспринимать как кисть, при помощи которой и происходит все волшебство:  
+Класс paintComponent содержит аргумент Graphics g, который можно воспринимать как кисть, при помощи которой и происходит всё волшебство:  
 ```java
 public void paintComponent(Graphics g) {
 ```
-Сначала необходимо произвести приведение типов, для расширеня функционала нашей "кисти":  
+Сначала необходимо произвести приведение типов для расширения функционала нашей «кисти»:  
 ```java
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
@@ -99,7 +99,7 @@ GradientPaint background = new GradientPaint(0, 0, Color.DARK_GRAY, getWidth(), 
             g2d.drawOval(glowX, glowY, 255, 255);
         }
 ```
-И наконец отрисовка фигур и текста:  
+И наконец, отрисовка фигур и текста:  
 ```java
         Color metalColor = new Color(150, 100, 180);
         g2d.setColor(metalColor);
